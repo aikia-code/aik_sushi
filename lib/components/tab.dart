@@ -6,6 +6,12 @@ class TabComponent extends StatelessWidget {
   const TabComponent({super.key, required this.iconPath});
 
   @override
+  /// Builds a [Tab] widget that displays a given icon with a blue-grey
+  /// background and a black foreground, with a circular border radius of 16.
+  ///
+  /// The icon is loaded from the given [iconPath], and the whole widget has a
+  /// fixed height of 80. Margins and padding are applied with a value of 8 and
+  /// 16, respectively.
   Widget build(BuildContext context) {
     return Tab(
       height: 80,
