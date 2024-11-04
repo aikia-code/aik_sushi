@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // tabs
+  // tabs + tab icons
   final List<Widget> tabs = [
     TabComponent(iconPath: 'lib/icons/sushi.png'),
     TabComponent(iconPath: 'lib/icons/donut.png'),
@@ -32,6 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   @override
+  /// Builds the main UI for the home screen with a tabbed interface.
+  ///
+  /// The screen consists of an app bar with menu and profile icons, a title
+  /// indicating the user's current choice, a tab bar for navigation, and a
+  /// tab view displaying content corresponding to each tab.
+  /// The tab bar uses icons for sushi, donut, and burger, and the tab views
+  /// display the respective food categories.
   Widget build(BuildContext context) {
     const int shadeOf = 50;
     const double sizeOf = 24;
@@ -41,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
       length: tabs.length,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('😋'),
+          title: const Text('🍣.🍩.🍔'),
           centerTitle: true,
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -93,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
             //   height: 16,
             // ),
 
-            //tab bar
+            //Tab bar
             TabBar(
               indicatorColor: Colors.blueGrey[shadeOf],
               indicatorSize: TabBarIndicatorSize.label,
@@ -113,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            //tab bar view
+            //Tab bar view
             Expanded(
               child: Container(
                 color: Colors.blueGrey[shadeOf],
