@@ -1,7 +1,7 @@
 import 'package:aik_sushi/components/tab_header.dart';
-import 'package:aik_sushi/screens/home/tabs/burger.dart';
-import 'package:aik_sushi/screens/home/tabs/donut.dart';
-import 'package:aik_sushi/screens/home/tabs/sushi.dart';
+import 'package:aik_sushi/screens/home/food_tabs/burger.dart';
+import 'package:aik_sushi/screens/home/food_tabs/donut.dart';
+import 'package:aik_sushi/screens/home/food_tabs/sushi.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
