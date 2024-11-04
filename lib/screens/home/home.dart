@@ -1,4 +1,4 @@
-import 'package:aik_sushi/components/tab.dart';
+import 'package:aik_sushi/components/tab_header.dart';
 import 'package:aik_sushi/screens/home/tabs/burger.dart';
 import 'package:aik_sushi/screens/home/tabs/donut.dart';
 import 'package:aik_sushi/screens/home/tabs/sushi.dart';
@@ -14,9 +14,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   // tabs + tab icons
   final List<Widget> tabs = [
-    TabComponent(iconPath: 'lib/icons/sushi.png'),
-    TabComponent(iconPath: 'lib/icons/donut.png'),
-    TabComponent(iconPath: 'lib/icons/burger.png'),
+    TabHeaderComponent(iconPath: 'lib/icons/sushi.png'),
+    TabHeaderComponent(iconPath: 'lib/icons/donut.png'),
+    TabHeaderComponent(iconPath: 'lib/icons/burger.png'),
   ];
 
   // tabView
@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   @override
+
   /// Builds the main UI for the home screen with a tabbed interface.
   ///
   /// The screen consists of an app bar with menu and profile icons, a title
