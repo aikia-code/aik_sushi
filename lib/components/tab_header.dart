@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class TabHeaderComponent extends StatefulWidget {
   final String iconPath;
+  final bool selected;
 
   const TabHeaderComponent({
     super.key,
     required this.iconPath,
+    required this.selected,
   });
 
   @override
@@ -26,7 +28,7 @@ class _TabHeaderComponentState extends State<TabHeaderComponent> {
         ),
         child: Image.asset(
           widget.iconPath,
-          color: Colors.black,
+          color: super.widget.selected ? Colors.pink : Colors.black,
         ),
       ),
     );
