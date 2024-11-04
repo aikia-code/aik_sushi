@@ -12,38 +12,30 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
-  // tabs + tab icons
-  final List<Widget> tabHeaders = [
-    TabHeaderComponent(
-      iconPath: 'lib/icons/sushi.png',
-    ),
-    TabHeaderComponent(
-      iconPath: 'lib/icons/donut.png',
-    ),
-    TabHeaderComponent(
-      iconPath: 'lib/icons/burger.png',
-    ),
-  ];
-
-  // tabView
-  final List<Widget> tabViews = [
-    SushiTab(),
-    DonutTab(),
-    BurgerTab(),
-  ];
-
   @override
-
-  /// Builds the main UI for the home screen with a tabbed interface.
-  ///
-  /// The screen consists of an app bar with menu and profile icons, a title
-  /// indicating the user's current choice, a tab bar for navigation, and a
-  /// tab view displaying content corresponding to each tab.
-  /// The tab bar uses icons for sushi, donut, and burger, and the tab views
-  /// display the respective food categories.
   Widget build(BuildContext context) {
     const int shadeOf = 50;
     const double sizeOf = 24;
+
+    // tabs + tab icons
+    List<Widget> tabHeaders = [
+      TabHeaderComponent(
+        iconPath: 'lib/icons/sushi.png',
+      ),
+      TabHeaderComponent(
+        iconPath: 'lib/icons/donut.png',
+      ),
+      TabHeaderComponent(
+        iconPath: 'lib/icons/burger.png',
+      ),
+    ];
+
+    // tabView
+    List<Widget> tabViews = [
+      SushiTab(),
+      DonutTab(),
+      BurgerTab(),
+    ];
 
     //Tab controller
     return DefaultTabController(
