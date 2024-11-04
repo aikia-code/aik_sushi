@@ -25,8 +25,7 @@ class FoodTileComponent extends StatelessWidget {
         ),
         child: Column(
           children: [
-            //price
-
+            //Food Price
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -51,8 +50,7 @@ class FoodTileComponent extends StatelessWidget {
               ],
             ),
 
-            //picture
-
+            //Food Image
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 32.0,
@@ -63,8 +61,7 @@ class FoodTileComponent extends StatelessWidget {
               ),
             ),
 
-            //flavor
-
+            //Food Flavor
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
@@ -78,6 +75,8 @@ class FoodTileComponent extends StatelessWidget {
                 ),
               ),
             ),
+
+            //StikXL
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
@@ -92,12 +91,12 @@ class FoodTileComponent extends StatelessWidget {
               ),
             ),
 
-            //spacer
+            //Spacer
             Expanded(
               child: SizedBox(),
             ),
 
-            //love icon button
+            //Love + Add button
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
