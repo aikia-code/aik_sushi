@@ -1,4 +1,5 @@
 import 'package:aik_sushi/components/food_tile.dart';
+import 'package:aik_sushi/components/tab_view.dart';
 import 'package:flutter/material.dart';
 
 class SushiTab extends StatelessWidget {
@@ -51,20 +52,6 @@ class SushiTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-        padding: EdgeInsets.all(8.0),
-        itemCount: ofSushi.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 1 / 1.5,
-        ),
-        itemBuilder: (context, index) {
-          return FoodTileComponent(
-            foodFlavor: ofSushi[index][0],
-            foodPrice: ofSushi[index][1],
-            foodColor: ofSushi[index][2],
-            foodImagePath: ofSushi[index][3],
-          );
-        });
+    return TabViewComponent(ofFood: ofSushi);
   }
 }
