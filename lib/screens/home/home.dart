@@ -11,23 +11,24 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   // tabs + tab icons
-  final List<Widget> tabs = [
-    TabHeaderComponent(iconPath: 'lib/icons/sushi.png'),
-    TabHeaderComponent(iconPath: 'lib/icons/donut.png'),
-    TabHeaderComponent(iconPath: 'lib/icons/burger.png'),
+  final List<Widget> tabHeaders = [
+    TabHeaderComponent(
+      iconPath: 'lib/icons/sushi.png',
+    ),
+    TabHeaderComponent(
+      iconPath: 'lib/icons/donut.png',
+    ),
+    TabHeaderComponent(
+      iconPath: 'lib/icons/burger.png',
+    ),
   ];
 
   // tabView
   final List<Widget> tabViews = [
-    //Sushi screen
     SushiTab(),
-
-    //Donut screen
     DonutTab(),
-
-    //Burger screen
     BurgerTab(),
   ];
 
@@ -46,8 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
     //Tab controller
     return DefaultTabController(
-      length: tabs.length,
+      length: tabHeaders.length,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: const Text('🍣.🍩.🍔'),
           centerTitle: true,
@@ -57,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.only(left: 24.0),
             child: Icon(
               Icons.menu,
-              color: Colors.black,
+              color: Colors.pink,
               size: sizeOf,
             ),
           ),
@@ -66,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(right: 24.0),
               child: Icon(
                 Icons.person,
-                color: Colors.black,
+                color: Colors.pink,
                 size: sizeOf,
               ),
             )
@@ -85,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(fontSize: sizeOf),
                   ),
                   Text(
-                    "Sushi!",
+                    "Tasty!",
                     style: TextStyle(
                       fontSize: sizeOf,
                       fontWeight: FontWeight.bold,
@@ -107,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
               indicatorSize: TabBarIndicatorSize.label,
               indicatorWeight: 16.0,
               dividerColor: Colors.transparent,
-              tabs: tabs,
+              tabs: tabHeaders,
             ),
 
             //Spacer
