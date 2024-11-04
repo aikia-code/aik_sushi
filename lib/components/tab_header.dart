@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TabComponent extends StatelessWidget {
+class TabHeaderComponent extends StatelessWidget {
   final String iconPath;
 
-  const TabComponent({super.key, required this.iconPath});
+  const TabHeaderComponent({super.key, required this.iconPath});
 
   @override
+
   /// Builds a [Tab] widget that displays a given icon with a blue-grey
   /// background and a black foreground, with a circular border radius of 16.
   ///
