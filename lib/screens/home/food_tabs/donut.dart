@@ -1,4 +1,3 @@
-import 'package:aik_sushi/components/food_tile.dart';
 import 'package:aik_sushi/components/tab_view.dart';
 import 'package:flutter/material.dart';
 
